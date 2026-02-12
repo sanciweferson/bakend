@@ -1,4 +1,4 @@
- {
+{
   "slug": "var",
   "category": "fundamentos",
   "title": "var — comportamento completo",
@@ -13,40 +13,30 @@
       "type": "example",
       "title": "Declaração com var",
       "code": [
-        "// Declarando uma variável com var",
         "var name = \"Sanciweferson\";",
-        "",
-        "// Exibindo o valor no console",
         "console.log(name);"
-      ]
+      ],
+      "value": "Sanciweferson"
     },
     {
       "type": "example",
       "title": "Redeclaração com var",
       "code": [
-        "// Declarando variável",
         "var name = \"San\";",
-        "",
-        "// Redeclarando a mesma variável (permitido com var)",
         "var name = \"San\";",
-        "",
-        "// Exibindo valor",
         "console.log(name);"
-      ]
+      ],
+      "value": "San"
     },
     {
       "type": "example",
       "title": "Reatribuição com var",
       "code": [
-        "// Declarando variável",
         "var name = \"Sanciweferson\";",
-        "",
-        "// Alterando o valor da variável",
         "name = \"Weferson\";",
-        "",
-        "// Exibindo novo valor",
         "console.log(name);"
-      ]
+      ],
+      "value": "Weferson"
     }
   ]
 }
