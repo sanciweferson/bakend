@@ -1,34 +1,52 @@
-{
+ {
+  "slug": "var",
+  "category": "fundamentos",
   "title": "var — comportamento completo",
+  "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting.",
   "cards": [
     {
       "type": "explanation",
       "title": "O que é var?",
-      "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting."
+      "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting (elevação)."
     },
     {
       "type": "example",
-      "description": "Declaração com var",
-      "code": ["var name = \""],
-      "value": "Sanciweferson"
-    },
-    {
-      "type": "example",
-      "description": "Redeclaração com var",
+      "title": "Declaração com var",
       "code": [
-
-        "var name = \"San\""
-      ],
-      "value": "San"
+        "// Declarando uma variável com var",
+        "var name = \"Sanciweferson\";",
+        "",
+        "// Exibindo o valor no console",
+        "console.log(name);"
+      ]
     },
     {
       "type": "example",
-      "description": "Reatribuição com var",
+      "title": "Redeclaração com var",
       "code": [
-        "var name = \"Sanciweferson\"",
-        "name = \"Weferson\""
-      ],
-      "value": "Weferson"
+        "// Declarando variável",
+        "var name = \"San\";",
+        "",
+        "// Redeclarando a mesma variável (permitido com var)",
+        "var name = \"San\";",
+        "",
+        "// Exibindo valor",
+        "console.log(name);"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "Reatribuição com var",
+      "code": [
+        "// Declarando variável",
+        "var name = \"Sanciweferson\";",
+        "",
+        "// Alterando o valor da variável",
+        "name = \"Weferson\";",
+        "",
+        "// Exibindo novo valor",
+        "console.log(name);"
+      ]
     }
   ]
 }
