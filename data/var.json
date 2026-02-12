@@ -1,0 +1,34 @@
+{
+  "title": "var — comportamento completo",
+  "cards": [
+    {
+      "type": "explanation",
+      "title": "O que é var?",
+      "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting."
+    },
+    {
+      "type": "example",
+      "description": "Declaração com var",
+      "code": ["var name = \""],
+      "value": "Sanciweferson"
+    },
+    {
+      "type": "example",
+      "description": "Redeclaração com var",
+      "code": [
+
+        "var name = \"San\""
+      ],
+      "value": "San"
+    },
+    {
+      "type": "example",
+      "description": "Reatribuição com var",
+      "code": [
+        "var name = \"Sanciweferson\"",
+        "name = \"Weferson\""
+      ],
+      "value": "Weferson"
+    }
+  ]
+}
