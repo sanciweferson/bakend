@@ -2,7 +2,7 @@
   "slug": "var",
   "category": "fundamentos",
   "title": "var — comportamento completo",
-  "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting.",
+  "description": "A palavra-chave var declara variáveis com escopo de função e sofre hoisting (elevação).",
   "cards": [
     {
       "type": "explanation",
@@ -11,32 +11,101 @@
     },
     {
       "type": "example",
-      "title": "Declaração com var",
+      "title": "1. Declaração com var",
       "code": [
         "var name = \"Sanciweferson\";",
         "console.log(name);"
-      ],
-      "value": "Sanciweferson"
+      ]
     },
     {
       "type": "example",
-      "title": "Redeclaração com var",
+      "title": "2. Redeclaração silenciosa",
       "code": [
         "var name = \"San\";",
         "var name = \"San\";",
         "console.log(name);"
-      ],
-      "value": "San"
+      ]
     },
     {
       "type": "example",
-      "title": "Reatribuição com var",
+      "title": "3. Reatribuição",
       "code": [
         "var name = \"Sanciweferson\";",
         "name = \"Weferson\";",
         "console.log(name);"
-      ],
-      "value": "Weferson"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "4. Hoisting básico",
+      "code": [
+        "console.log(hoisting);",
+        "var hoisting = \"JavaScript\";"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "5. Hoisting em função (shadowing com var)",
+      "code": [
+        "var valor = 100;",
+        "function shadowing() {",
+        "  return valor;",
+        "  var valor = 10;",
+        "}",
+        "console.log(shadowing());"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "6. var ignora blocos",
+      "code": [
+        "for (var i = 0; i < 1; i++) {}",
+        "console.log(i);"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "7. Função atribuída a variável",
+      "code": [
+        "console.log(dizerOi());",
+        "var dizerOi = function() {};"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "8. Closure com var (referência única)",
+      "code": [
+        "var funcoes = [];",
+        "for (var i = 0; i < 3; i++) {",
+        "  funcoes.push(function() { return i; });",
+        "}",
+        "console.log(funcoes[0]());",
+        "console.log(funcoes[1]());",
+        "console.log(funcoes[2]());"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "9. Closure correto usando IIFE",
+      "code": [
+        "var funcoes = [];",
+        "for (var i = 0; i < 3; i++) {",
+        "  (function(valorAtual) {",
+        "    funcoes.push(function() { return valorAtual; });",
+        "  })(i);",
+        "}",
+        "console.log(funcoes[0]());",
+        "console.log(funcoes[1]());",
+        "console.log(funcoes[2]());"
+      ]
+    },
+    {
+      "type": "example",
+      "title": "10. Variável sem valor",
+      "code": [
+        "var lixo;",
+        "console.log(lixo);"
+      ]
     }
   ]
 }
